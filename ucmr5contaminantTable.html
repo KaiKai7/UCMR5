@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuraView UCMR 5 Viewer Contaminant Table</title>
+    <!-- Include Material Icons stylesheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+        .dark-mode th {
+            background-color: #555;
+        }
+        .dark-mode tr:hover {
+            background-color: #444;
+        }
+        .contaminant-link {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 2px solid;
+            border-radius: 15px;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 5px; /* Space between the name and description */
+        }
+        .contaminant-description {
+            padding: 5px 10px;
+        }
+        .contaminant-1 { border-color: rgba(255, 0, 0, 0.7); }
+        .contaminant-2 { border-color: rgba(0, 255, 0, 0.7); }
+        .contaminant-3 { border-color: rgba(0, 0, 255, 0.7); }
+        .contaminant-4 { border-color: rgba(255, 255, 0, 0.7); }
+        .contaminant-5 { border-color: rgba(0, 255, 255, 0.7); }
+        .contaminant-6 { border-color: rgba(255, 0, 255, 0.7); }
+        .contaminant-7 { border-color: rgba(192, 192, 192, 0.7); }
+        .contaminant-8 { border-color: rgba(128, 0, 0, 0.7); }
+        .contaminant-9 { border-color: rgba(128, 128, 0, 0.7); }
+        .contaminant-10 { border-color: rgba(0, 128, 0, 0.7); }
+        .contaminant-11 { border-color: rgba(128, 0, 128, 0.7); }
+        .contaminant-12 { border-color: rgba(0, 128, 128, 0.7); }
+        .contaminant-13 { border-color: rgba(0, 0, 128, 0.7); }
+        .contaminant-14 { border-color: rgba(255, 165, 0, 0.7); }
+        .contaminant-15 { border-color: rgba(255, 20, 147, 0.7); }
+        .contaminant-16 { border-color: rgba(50, 205, 50, 0.7); }
+        .contaminant-17 { border-color: rgba(218, 165, 32, 0.7); }
+        .contaminant-18 { border-color: rgba(75, 0, 130, 0.7); }
+        .contaminant-19 { border-color: rgba(255, 69, 0, 0.7); }
+        .contaminant-20 { border-color: rgba(173, 216, 230, 0.7); }
+        .contaminant-21 { border-color: rgba(244, 164, 96, 0.7); }
+        .contaminant-22 { border-color: rgba(72, 61, 139, 0.7); }
+        .contaminant-23 { border-color: rgba(127, 255, 0, 0.7); }
+        .contaminant-24 { border-color: rgba(255, 105, 180, 0.7); }
+        .contaminant-25 { border-color: rgba(240, 230, 140, 0.7); }
+        .contaminant-26 { border-color: rgba(70, 130, 180, 0.7); }
+        .contaminant-27 { border-color: rgba(210, 105, 30, 0.7); }
+        .contaminant-28 { border-color: rgba(255, 20, 147, 0.7); }
+        .contaminant-29 { border-color: rgba(60, 179, 113, 0.7); }
+        .contaminant-30 { border-color: rgba(153, 50, 204, 0.7); }
+        /* Add margin to the button */
+        #themeToggleBtn {
+            margin-bottom: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Update the button to use Material Icons -->
+    <button id="themeToggleBtn">
+        <span class="material-icons" id="themeIcon">light_mode</span>
+    </button>
+    
+    <h1>PuraView UCMR 5 Contaminant Lookup</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/substance/472629542" target="_blank" class="contaminant-link contaminant-1">PFBA (Perfluorobutanoic acid)</a>
+                    <div class="contaminant-description">PFBA is a breakdown product of other PFAS used in stain-resistant fabrics, paper food packaging, and carpets. PFBA was also used for manufacturing photographic film. The 3M Company was once a major manufacturer of PFBA and products containing PFBA but production was phased out in 1998.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/67815#section=Uses" target="_blank" class="contaminant-link contaminant-2">PFBS (Perfluorobutanesulfonic acid)</a>
+                    <div class="contaminant-description">Perfluorobutane sulfonate (PFBS) is one of a group of related chemicals known as per- and polyfluoroalkyl substances (PFAS). This group of chemicals is commonly used in non-stick and stain- resistant consumer products, food packaging, fire-fighting foam, and industrial processes.</div>
+                </td>
+            </tr>
+            <!-- Add similar rows for the rest of the contaminants -->
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorohexanoic-acid#section=Use-Classification" target="_blank" class="contaminant-link contaminant-3">PFHxA (Perfluorohexanoic acid)</a>
+                    <div class="contaminant-description">PFHxA is a breakdown product of other PFAS that are used in stain-resistant fabrics, paper food packaging, and carpets; it is also used for manufacturing photographic film, and it is used as a substitute for longer chain perfluoroalkyl carboxylic acids (PFCAs) in consumer products. PFHxA has been found to accumulate in agricultural crops and has been detected in household dust, soils, food products, and surface, ground, and drinking water.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://iris.epa.gov/Document/&deid=355410" target="_blank" class="contaminant-link contaminant-4">PFHxS (Perfluorohexanesulfonic acid)</a>
+                    <div class="contaminant-description">PFHxS is used in water- and stain-protective coatings for consumer products such as carpets, textiles, paper (including food-contact), packaging (including food-contact), textiles, and electronics. It has been used industrially as a surfactant to make fluoropolymers, as a surfactant or surface protection agent for cleaning and polishing products, and in other industrial fluids or water-proofing agents. It may also be present unintentionally as an impurity from industrial production processes. PFHxS has also been used in aqueous film-forming foam (AFFF) for fire suppression.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluoroheptanoic-acid#section=Use-and-Manufacturing" target="_blank" class="contaminant-link contaminant-5">PFHpA (Perfluoroheptanoic acid)</a>
+                    <div class="contaminant-description">Long-chain perfluoroalkanecarboxylic acids and their salts are surface-active chemicals (surfactants), which greatly reduce the surface tension (surface energy) of water, aqueous solutions, and organic liquids even at low concentrations. These acids (C6- C12) and derivatives are used as wetting, dispersing, emulsifying, and foaming agents. /Long-chain perfluoroalkanecarboxylic acids/</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://en.wikipedia.org/wiki/Perfluorooctanoic_acid" target="_blank" class="contaminant-link contaminant-6">PFOA (Perfluorooctanoic acid)</a>
+                    <div class="contaminant-description">PFOA is used in several industrial applications, including carpeting, upholstery, apparel, floor wax, textiles, fire fighting foam and sealants. PFOA serves as a surfactant in the emulsion polymerization of fluoropolymers and as a building block for the synthesis of perfluoroalkyl-substituted compounds, polymers, and polymeric materials. PFOA has been manufactured since the 1940s in industrial quantities.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://en.wikipedia.org/wiki/Perfluorooctanesulfonic_acid" target="_blank" class="contaminant-link contaminant-7">PFOS (Perfluorooctanesulfonic acid)</a>
+                    <div class="contaminant-description">In 1949, 3M began producing PFOS-based compounds by electrochemical fluorination resulting in the synthetic precursor perfluorooctanesulfonyl fluoride. In 1968, organofluorine content was detected in the blood serum of consumers, and in 1976 it was suggested to be perfluorooctanoic acid (PFOA) or a related compound such as PFOS. In 1997, 3M detected PFOS in blood from global blood banks, although the company's internal documents indicate knowledge of this decades earlier, dating from the 1970s. In 1999, the U.S. Environmental Protection Agency began investigating perfluorinated compounds after receiving data on the global distribution and toxicity of PFOS, the key ingredient in Scotchgard. For these reasons, and USEPA pressure, the primary American producer of PFOS, 3M, announced, in May 2000, the phaseout of the production of PFOS, PFOA, and PFOS-related products. Most other manufacturers (particularly, those in Europe) phased out the production of PFOS and perfluorooctanoic acid (PFOA) in 2000 and 2006, respectively. A shorter-chain PFOS (perfluorohexanesulfonic acid, PFHxS), was included in Annex A to the Stockholm Convention in 2022. Currently, most of PFOS and PFOS-related chemicals are produced in China.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.healthvermont.gov/sites/default/files/document/env-cdp-375-95-1-pfna.pdf" target="_blank" class="contaminant-link contaminant-8">PFNA (Perfluorononanoic acid)</a>
+                    <div class="contaminant-description">Perfluorononanoic acid (PFNA) is a synthetic, perfluorinated carboxylic acid and fluorosurfactant that is also an environmental contaminant. It's a member of the perfluoroalkyl class of chemicals, which are often used in consumer products. PFNA is similar in function and use to PFOA and was used in the production of non-stick, stain repellent, and chemically inert coatings. It's also a breakdown product of stain- and grease-proof coatings on food packaging, couches, and carpets.
+                        Also as a lubricating oil additive, surfactant for fire extinguishers, cleaning agent, textile finishing agent, polishing surfactant, and in liquid crystal display panels.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://cfpub.epa.gov/ncea/iris_drafts/recordisplay.cfm?deid=354408#:~:text=PFDA%20has%20been%20used%20in,furniture%2C%20upholstery%2C%20and%20carpet." target="_blank" class="contaminant-link contaminant-9">PFDA (Perfluorodecanoic acid)</a>
+                    <div class="contaminant-description">Perfluorodecanoic Acid (PFDA) and its related salts are members of the group of per and polyfluoroalkyl substances (PFAS). PFAS are not naturally occurring in the environment; they are man-made compounds that have been used widely over the past several decades in consumer products and industrial applications because of their resistance to heat, oil, stains, grease, and water. Concerns about PFDA and other PFAS stem from the resistance of these compounds to hydrolysis, photolysis, and biodegradation, which leads to their persistence in the environment. PFDA has been used in stain and grease-proof coatings on food packaging, furniture, upholstery, and carpet. PFDA has also been detected in nano- and impregnation-sprays, outdoor textiles, carpet, gloves, paper-based food contact materials, ski wax, and leather. Exposure is possible via inhalation of indoor or outdoor air, ingestion of drinking water and food, and dermal contact with PFDA-containing products.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.ewg.org/sites/humantoxome/chemicals/chemical.php?chemid=100311" target="_blank" class="contaminant-link contaminant-10">PFUnA (Perfluoroundecanoic acid)</a>
+                    <div class="contaminant-description">Breakdown product of stain- and grease-proof coatings on food packaging, couches, carpets.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorododecanoic-acid" target="_blank" class="contaminant-link contaminant-11">PFDoA (Perfluorododecanoic acid)</a>
+                    <div class="contaminant-description">It is a highly persistent, bioaccumulative breakdown product of stain- and grease-proof coatings on food packaging, soft furnishings and carpets. It has a role as an environmental contaminant. It is functionally related to a dodecanoic acid.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorotridecanoic-acid" target="_blank" class="contaminant-link contaminant-12">PFTrDA (Perfluorotridecanoic acid)</a>
+                    <div class="contaminant-description">Perfluorotridecanoic acid (PFTriA) is a type of perfluoroalkyl substance (PFAS) known for its unique properties, such as resistance to heat, oil, stains, grease, and water. Common uses of PFTriA include: Stain and grease-proof coatings: Used on food packaging, furniture, upholstery, and carpets. Outdoor textiles and gear: Found in products like gloves, ski wax, and leather.
+                        Industrial applications: Used in various formulations for its surfactant properties. These applications leverage the durability and resistance properties of PFTriA, but they also contribute to its persistence in the environment and potential health risks.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9785682/#:~:text=Perfluorotetradecanoic%20acid%20(PFTeDA)%20is%20a,%2C%20and%20insecticides%20%5B4%5D." target="_blank" class="contaminant-link contaminant-13">PFTeDA (Perfluorotetradecanoic acid)</a>
+                    <div class="contaminant-description">Perfluorotetradecanoic acid (PFTeDA) is a long-chain PFAA consisting of a chain of 14 carbons. This molecule is found in industrial and commercial products including photographic films, firefighting foams, detergents, and insecticides</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/75921" target="_blank" class="contaminant-link contaminant-14">PFPeA (Perfluoropentanoic acid)</a>
+                    <div class="contaminant-description">PFPeA is used as an emulsifying agent for polymer dispersion, extinction foams, stain repellents, additives for paints, and coatings. It is also a powerful cation exchanger in ion-pairing chromatography.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/75922" target="_blank" class="contaminant-link contaminant-15">PFPeS (Perfluoropentanesulfonic acid)</a>
+                    <div class="contaminant-description">Perfluoropentanesulfonic acid (PFPeS) is used in various applications due to its unique properties. Some common uses include: Emulsifying agent: Used for polymer dispersion and in the production of extinction foams. Stain repellents: Applied in products to repel stains. Additives for paints and coatings: Enhances the properties of paints and coatings. Ion-pairing chromatography: Acts as a powerful cation exchanger.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.scbt.com/p/perfluorohexadecanoic-acid-67905-19-5" target="_blank" class="contaminant-link contaminant-16">PFHxDA (Perfluorohexadecanoic acid)</a>
+                    <div class="contaminant-description">Perfluorohexadecanoic acid (PFHxDA) is used in various applications due to its unique properties. Some common uses include: Diagnostic tool: Employed for detecting human serum albumin. Binding with protease activity: Triggers fluorescence release, enabling the detection process. Molecular docking agent: Forms hydrogen bonds with fatty acids and aromatic hydrocarbons.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/167547" target="_blank" class="contaminant-link contaminant-17">PFODA (Perfluorooctadecanoic acid)</a>
+                    <div class="contaminant-description">Perfluorooctadecanoic acid (PFODA) is used in various industrial applications due to its unique properties. Some common uses include: Surfactant: Used in the emulsion polymerization of fluoropolymers. Building block: Utilized in the synthesis of perfluoroalkyl-substituted compounds, polymers, and polymeric materials. Coatings: Applied in stain- and water-resistant coatings for textiles and carpets. Non-stick cookware: Used in non-stick coatings on cookware. Firefighting foam: Incorporated in firefighting foams.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://en.wikipedia.org/wiki/GenX" target="_blank" class="contaminant-link contaminant-18">HFPO-DA (GenX chemicals)</a>
+                    <div class="contaminant-description">GenX is a Chemours trademark name for a synthetic, short-chain organofluorine chemical compound, the ammonium salt of hexafluoropropylene oxide dimer acid (HFPO-DA). It can also be used more informally to refer to the group of related fluorochemicals that are used to produce GenX. DuPont began the commercial development of GenX in 2009 as a replacement for perfluorooctanoic acid (PFOA, also known as C8). The chemicals are used in products such as food packaging, paints, cleaning products, non-stick coatings, outdoor fabrics and firefighting foam. The chemicals are manufactured by Chemours, a corporate spin-off of DuPont, in Fayetteville, North Carolina. GenX chemicals are used as replacements for PFOA for manufacturing fluoropolymers such as Teflon, the GenX chemicals serve as surfactants and processing aids in the fluoropolymer production process to lower the surface tension allowing the polymer particles to grow larger. The GenX chemicals are then removed from the final polymer by chemical treatment and heating. PFOA and related compounds have been found to be toxic and carcinogenic. However, in lab tests on rats, GenX has been shown to cause many of the same health problems as PFOA.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/11Cl-PF3OUdS" target="_blank" class="contaminant-link contaminant-19">11CI-PF3OUdS (11-Chloroeicosafluoro-3-oxaundecane-1-sulfonic acid)</a>
+                    <div class="contaminant-description">11CI-PF3OUdS, also known as 11-Chloroeicosafluoro-3-oxaundecane-1-sulfonic acid, is primarily used in environmental analysis.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.ewg.org/tapwater/contaminant.php?contamcode=E306#:~:text=9%2Dchlorohexadecafluoro%2D3%2Doxanone%2D1%2Dsulfonic%20acid%20(9Cl%2DPF3ONS)%20is%20a%20member%20of,accelerated%20puberty%2C%20liver%20and%20immune%20system%20damage" target="_blank" class="contaminant-link contaminant-20">9Cl-PF3ONS (9-Chlorohexadecafluoro-3-oxanonane-1-sulfonic acid)</a>
+                    <div class="contaminant-description">9-chlorohexadecafluoro-3-oxanonane-1-sulfonic acid (9Cl-PF3ONS) is a perfluorinated chemical and member of the per- and polyfluoroalkyl substances (PFAS) family. PFAS are used in many consumer products and industrial processes due to their unique properties, such as water repellency, stain resistance, and heat resistance. 9Cl-PF3ONS is also known as 6:2 Cl-PFESA.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.caymanchem.com/product/37267" target="_blank" class="contaminant-link contaminant-21">DONA (4,8-Dioxa-3H-perfluorononanoic acid)</a>
+                    <div class="contaminant-description">4,8-Dioxa-3H-perfluorononanoic acid is a type of perfluoroalkyl substance (PFAS). It is also known as the parent acid of 3M’s ADONA ammonium salt. This compound has been found in bottled water and watersheds</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/N-ethylperfluorooctanesulfonamidoacetic-acid" target="_blank" class="contaminant-link contaminant-22">NFDHA (N-ethyl perfluorooctanesulfonamidoacetic acid)</a>
+                    <div class="contaminant-description">Limited information available, click on contaminant for fact sheet.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/2-_N-Methylperfluorooctanesulfonamido_acetic-acid" target="_blank" class="contaminant-link contaminant-23">NMeFOSAA (N-methyl perfluorooctanesulfonamidoacetic acid)</a>
+                    <div class="contaminant-description">Limited information available, click on contaminant for fact sheet.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://efsa.onlinelibrary.wiley.com/doi/pdfdirect/10.2903/j.efsa.2011.2182" target="_blank" class="contaminant-link contaminant-24">ADONA (3H-perfluoro-3-[(3-methoxy-propoxy)propanoic acid)</a>
+                    <div class="contaminant-description">3H-Perfluoro-3-[(3-methoxy-propoxy)propanoic acid], also known as ADONA, is a perfluoroalkyl substance (PFAS) used as an emulsifier in the production of various fluoropolymers1. It is often used in food contact materials and has been evaluated for safety by the European Food Safety Authority (EFSA). The EFSA concluded that there is no safety concern for consumers if the substance is used under specific conditions, such as in the polymerization of fluoropolymers processed at high temperatures</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/substance/472629549" target="_blank" class="contaminant-link contaminant-25">PFMPA (Perfluoro-4-methoxybutanoic acid)</a>
+                    <div class="contaminant-description">Limited information available, click on contaminant for fact sheet.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.scbt.com/p/perfluoro-2-ethoxyethane-sulphonic-acid-113507-82-7" target="_blank" class="contaminant-link contaminant-26">PFEESA (Perfluoro-2-ethoxyethanesulfonic acid)</a>
+                    <div class="contaminant-description">Perfluoro(2-ethoxyethane)sulphonic acid can act as a surfactant, which means it has both hydrophobic (water-repellent) and hydrophilic (water-attracting) properties. This makes it useful in formulations such as emulsifiers, wetting agents, and detergents. Perfluoro(2-ethoxyethane)sulphonic acid is known for its high ionic conductivity, which makes it suitable as an electrolyte material in fuel cells. Fuel cells are electrochemical devices that convert chemical energy into electrical energy, and Perfluoro(2-ethoxyethane)sulphonic acid can help facilitate the movement of ions within the cell.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/5125273" target="_blank" class="contaminant-link contaminant-27">PFMOAA (Perfluoro-2-methoxyacetic acid)</a>
+                    <div class="contaminant-description">Limited information available, click on contaminant for fact sheet.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluoro-3-methoxypropanoic-acid" target="_blank" class="contaminant-link contaminant-28">PFMOPrA (Perfluoro-3-methoxypropanoic acid)</a>
+                    <div class="contaminant-description">Limited information available, click on contaminant for fact sheet.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/12498036" target="_blank" class="contaminant-link contaminant-29">PFMOBA (Perfluoro-4-methoxybutanoic acid): 0.005 µg/L</a>
+                    <div class="contaminant-description">Limited information available, click on contaminant for fact sheet.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.epa.gov/system/files/documents/2023-11/ucmr5-technical-fact-sheet-lithium-in-drinking-water.pdf" target="_blank" class="contaminant-link contaminant-30">Lithium</a>
+                    <div class="contaminant-description">Lithium is a naturally occurring element and may be found at higher concentrations in certain parts of the country, particularly in groundwater sources in arid locations in the Western U.S. where geologic formations contain lithium salts. Lithium, in various formulations, has numerous commercial uses including as a pharmaceutical drug, an industrial chemical catalyst, a sanitizing agent for swimming pools and hot tubs, and increasingly, as a component of lithium-ion batteries for electronics and electric vehicles. Lithium is likely present in a variety of foods (such as cereal grains, leafy vegetables, and root crops), but it is not clear which foods may be significant sources of dietary lithium. There are differing perspectives on whether lithium is beneficial in small amounts (e.g., a micronutrient). The U.S. has no current recommended dietary allowance. Lithium salts (e.g., lithium carbonate, lithium citrate) have been used clinically for decades in the U.S. as a mood-stabilizing medication, primarily for bipolar disorder. Therapeutic doses of lithium compounds generally range from 600-1,200 mg/day. Therapeutic doses carry the risk of harmful side effects, so therapy strategies are based on a risk-benefit assessment for individual patients.</div>
+                </td>
+            </tr>
+           
+            <!-- Continue with other contaminants -->
+        </tbody>
+    </table>
+    <script>
+        document.getElementById('themeToggleBtn').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const themeIcon = document.getElementById('themeIcon');
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.textContent = 'dark_mode';
+            } else {
+                themeIcon.textContent = 'light_mode';
+            }
+        });
+    </script>
+    <footer>
+        <div class="attribution">
+    <h2>Data Sources :</h2>
+    <ul>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/substance/472629542" target="_blank">https://pubchem.ncbi.nlm.nih.gov/substance/472629542</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/67815#section=Uses" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/67815#section=Uses</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorohexanoic-acid#section=Use-Classification" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorohexanoic-acid#section=Use-Classification</a></li>
+        <li><a href="https://iris.epa.gov/Document/&deid=355410" target="_blank">https://iris.epa.gov/Document/&deid=355410</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluoroheptanoic-acid#section=Use-and-Manufacturing" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/Perfluoroheptanoic-acid#section=Use-and-Manufacturing</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Perfluorooctanoic_acid" target="_blank">https://en.wikipedia.org/wiki/Perfluorooctanoic_acid</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Perfluorooctanesulfonic_acid" target="_blank">https://en.wikipedia.org/wiki/Perfluorooctanesulfonic_acid</a></li>
+        <li><a href="https://www.healthvermont.gov/sites/default/files/document/env-cdp-375-95-1-pfna.pdf" target="_blank">https://www.healthvermont.gov/sites/default/files/document/env-cdp-375-95-1-pfna.pdf</a></li>
+        <li><a href="https://cfpub.epa.gov/ncea/iris_drafts/recordisplay.cfm?deid=354408#:~:text=PFDA%20has%20been%20used%20in,furniture%2C%20upholstery%2C%20and%20carpet." target="_blank">https://cfpub.epa.gov/ncea/iris_drafts/recordisplay.cfm?deid=354408#:~:text=PFDA%20has%20been%20used%20in,furniture%2C%20upholstery%2C%20and%20carpet.</a></li>
+        <li><a href="https://www.ewg.org/sites/humantoxome/chemicals/chemical.php?chemid=100311" target="_blank">https://www.ewg.org/sites/humantoxome/chemicals/chemical.php?chemid=100311</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorododecanoic-acid" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorododecanoic-acid</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorotridecanoic-acid" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/Perfluorotridecanoic-acid</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9785682/#:~:text=Perfluorotetradecanoic%20acid%20(PFTeDA)%20is%20a,%2C%20and%20insecticides%20%5B4%5D." target="_blank">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9785682/#:~:text=Perfluorotetradecanoic%20acid%20(PFTeDA)%20is%20a,%2C%20and%20insecticides%20%5B4%5D.</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/75921" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/75921</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/75922" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/75922</a></li>
+        <li><a href="https://www.scbt.com/p/perfluorohexadecanoic-acid-67905-19-5" target="_blank">https://www.scbt.com/p/perfluorohexadecanoic-acid-67905-19-5</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/167547" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/167547</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/GenX" target="_blank">https://en.wikipedia.org/wiki/GenX</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/11Cl-PF3OUdS" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/11Cl-PF3OUdS</a></li>
+        <li><a href="https://www.ewg.org/tapwater/contaminant.php?contamcode=E306#:~:text=9%2Dchlorohexadecafluoro%2D3%2Doxanone%2D1%2Dsulfonic%20acid%20(9Cl%2DPF3ONS)%20is%20a%20member%20of,accelerated%20puberty%2C%20liver%20and%20immune%20system%20damage" target="_blank">https://www.ewg.org/tapwater/contaminant.php?contamcode=E306#:~:text=9%2Dchlorohexadecafluoro%2D3%2Doxanone%2D1%2Dsulfonic%20acid%20(9Cl%2DPF3ONS)%20is%20a%20member%20of,accelerated%20puberty%2C%20liver%20and%20immune%20system%20damage</a></li>
+        <li><a href="https://www.caymanchem.com/product/37267" target="_blank">https://www.caymanchem.com/product/37267</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/N-ethylperfluorooctanesulfonamidoacetic-acid" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/N-ethylperfluorooctanesulfonamidoacetic-acid</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/2-_N-Methylperfluorooctanesulfonamido_acetic-acid" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/2-_N-Methylperfluorooctanesulfonamido_acetic-acid</a></li>
+        <li><a href="https://efsa.onlinelibrary.wiley.com/doi/pdfdirect/10.2903/j.efsa.2011.2182" target="_blank">https://efsa.onlinelibrary.wiley.com/doi/pdfdirect/10.2903/j.efsa.2011.2182</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/substance/472629549" target="_blank">https://pubchem.ncbi.nlm.nih.gov/substance/472629549</a></li>
+        <li><a href="https://www.scbt.com/p/perfluoro-2-ethoxyethane-sulphonic-acid-113507-82-7" target="_blank">https://www.scbt.com/p/perfluoro-2-ethoxyethane-sulphonic-acid-113507-82-7</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/5125273" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/5125273</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/Perfluoro-3-methoxypropanoic-acid" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/Perfluoro-3-methoxypropanoic-acid</a></li>
+        <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/12498036" target="_blank">https://pubchem.ncbi.nlm.nih.gov/compound/12498036</a></li>
+        <li><a href="https://www.epa.gov/system/files/documents/2023-11/ucmr5-technical-fact-sheet-lithium-in-drinking-water.pdf" target="_blank">https://www.epa.gov/system/files/documents/2023-11/ucmr5-technical-fact-sheet-lithium-in-drinking-water.pdf</a></li>
+    </ul>
+</div>
+    </footer>
+</body>
+</html>
